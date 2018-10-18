@@ -18,7 +18,7 @@ class Products extends Component {
                         products,
                         isLoading: false
                     });
-                }, 2000);
+                }, 1000);
             });
     }
     
