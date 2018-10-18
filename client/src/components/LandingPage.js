@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const LandingPage = () => (
     <div className="jumbotron">
-        <h1 className="display-3">My store</h1>
-        <p className="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <h1 className="display-3">Crud store</h1>
+        <p className="lead">Simple crud store using react, express, mongodb.</p>
         <hr className="my-4" />
         <p>You can create, read and update products</p>
         <p className="lead">

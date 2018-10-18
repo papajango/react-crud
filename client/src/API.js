@@ -1,4 +1,5 @@
-const API_URL = 'http://localhost:5000/products';
+const API_URL = window.location.hostname === 'localhost' ||
+    window.location.hostname === '127.0.0.1' ? 'http://localhost:5000/products' : 'https://react-crud-api.now.sh/products';
 
 export function getAllProducts() {
     return fetch(API_URL)

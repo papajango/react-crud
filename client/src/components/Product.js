@@ -12,14 +12,13 @@ const Product = ({ product, cols, showStock, editing, deleteProduct }) => (
                 <p className="card-text">{product.quantity} in stock</p> :
                 ''
             }
-            {editing ? 
+            { editing ? 
                 <div>
                     <Link to={`/products/${product._id}/edit`} className="btn btn-info">Edit Product</Link>
                     <button onClick={deleteProduct} className="btn btn-danger">Delete Product</button>
                 </div> :
                 <Link to={`/products/${product._id}`} className="btn btn-primary">View Product</Link>
             }
-            
         </div>
     </div>
 );

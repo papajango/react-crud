@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import './App.css';
 import LandingPage from './components/LandingPage';
 import NotFound from './components/NotFound';
 import Products from './containers/Products';
