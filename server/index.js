@@ -3,7 +3,7 @@ const cors = require('cors');
 const monk = require('monk');
 
 const app = express();
-const db = monk(process.env.MONGO_URI || 'localhost/twitter');
+const db = monk(process.env.MONGO_URI || 'localhost/productsDB');
 const products = db.get('products');
 
 app.use(cors());
