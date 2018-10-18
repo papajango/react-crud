@@ -7,6 +7,7 @@ import Products from './containers/Products';
 import ViewProduct from './containers/ViewProduct';
 import CreateProduct from './containers/CreateProduct';
 import Header from './components/Header';
+import EditProduct from './containers/EditProduct';
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
             <Route exact path='/' component={LandingPage} />
             <Route exact path='/products' component={Products} />
             <Route path='/products/create' component={CreateProduct} />
+            <Route path='/products/:_id/edit' component={EditProduct} />
             <Route path='/products/:_id' component={ViewProduct} />
             <Route path='*' component={NotFound} />
           </Switch>

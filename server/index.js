@@ -29,14 +29,38 @@ app.post('/products', (req, res) => {
     const product = {
         title: req.body.title.toString(),
         description: req.body.description.toString(),
-        price: req.body.price.toString(),
-        quantity: req.body.quantity.toString(),
+        price: Number(req.body.price),
+        quantity: Number(req.body.quantity),
         image: req.body.image.toString()
     };
     products
         .insert(product)
         .then(createdProduct => {
             res.json(createdProduct);
+        });
+});
+
+app.put('/products/:id', (req, res) => {
+    const product = {
+        _id: req.body._id.toString(),
+        title: req.body.title.toString(),
+        description: req.body.description.toString(),
+        price: Number(req.body.price),
+        quantity: Number(req.body.quantity),
+        image: req.body.image.toString()
+    };
+    products
+        .update(req.params.id, product)
+        .then(updatedProduct => {
+            res.json(updatedProduct);
+        });
+});
+
+app.delete('/products/:id', (req, res) => {
+    products
+        .remove(req.params.id)
+        .then(removedProduct => {
+            res.json(removedProduct);
         });
 });
 
